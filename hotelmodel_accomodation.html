@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Hotel</title>
+    <link rel="stylesheet" href="hotelmodel_accomodation.css" />
+    <!-- Link to your CSS file for styling -->
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <h1><img src="hotel-logo.png" alt="Luxury Hotel Logo" /></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="hotelmodel_accomodation.html">Accommodations</a></li>
+            <li><a href="hotelmodel_amenities.html">Amenities</a></li>
+            <li><a href="hotelmodel_dinning.html">Dining</a></li>
+            <li><a href="hotelmodel_spa-wellness.html">Spa & Wellness</a></li>
+            <li><a href="hotelmodel_special-offers.html">Special Offers</a></li>
+            <li><a href="hotelmodel_about.html">about</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <img
+        src="C:\Users\Hp\OneDrive\Pictures\luxury hotel\pexels-thorsten-technoman-109353-338504.jpg"
+        alt="Banner Image"
+      />
+      <div class="overlay">
+        <h2>Accommodations</h2>
+        <p>Discover the epitome of luxury accommodations.</p>
+      </div>
+    </section>
+    <div class="accommodation-grid">
+      <!-- Accommodation card 1 -->
+      <div class="accommodation-card">
+        <img
+          class="accommodation-image"
+          src="C:\Users\Hp\Downloads\istockphoto-887360960-1024x1024.jpg"
+          alt="Room 1"
+        />
+        <div class="accommodation-description">
+          <h3>Deluxe Suite</h3>
+          <p>
+            Spacious suite with panoramic views, luxury amenities, and
+            king-sized bed.
+          </p>
+          <a href="#" class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Accommodation card 2 -->
+      <div class="accommodation-card">
+        <img
+          class="accommodation-image"
+          src="C:\Users\Hp\Downloads\istockphoto-1333390975-1024x1024.jpg"
+          alt="Room 2"
+        />
+        <div class="accommodation-description">
+          <h3>Executive Room</h3>
+          <p>
+            Elegant room featuring modern design, workspace, and complimentary
+            breakfast.
+          </p>
+          <a href="#" class="cta-button">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Accommodation card 3 -->
+      <div class="accommodation-card">
+        <img
+          class="accommodation-image"
+          src="C:\Users\Hp\Downloads\istockphoto-503044702-1024x1024.jpg"
+          alt="Room 3"
+        />
+        <div class="accommodation-description">
+          <h3>Luxury Villa</h3>
+          <p>
+            Luxurious villa with private pool, personalized service, and
+            stunning ocean views.
+          </p>
+          <a href="#" class="cta-button">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <p>
+          "Wonderful experience! The staff was incredibly friendly and helpful.
+          The room was spacious and clean. Will definitely stay here again!"
+        </p>
+        <p class="testimonial-author">- John Doe</p>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          "Absolutely loved my stay at this hotel. The amenities were top-notch,
+          and the location was perfect. Highly recommend!"
+        </p>
+        <p class="testimonial-author">- Jane Smith</p>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          "Amazing service from start to finish. The attention to detail and
+          personalized care made my stay truly memorable."
+        </p>
+        <p class="testimonial-author">- Emily Johnson</p>
+      </div>
+
+      <!-- Add more testimonials as needed -->
+
+      <div class="testimonial-navigation">
+        <button onclick="prevTestimonial()">Previous</button>
+        <button onclick="nextTestimonial()">Next</button>
+      </div>
+    </div>
+
+    <script>
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial) => {
+          testimonial.classList.remove("active");
+        });
+        testimonials[index].classList.add("active");
+      }
+
+      function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }
+
+      function prevTestimonial() {
+        currentTestimonial =
+          (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(currentTestimonial);
+      }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>123 Luxury Street</li>
+            <li>City, Country</li>
+            <li>info@luxuryhotel.com</li>
+            <li>+123 456 7890</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Social Media</h3>
+          <div class="social-links">
+            <a href="#">F</a>
+            <a href="#">T</a>
+            <a href="#">I</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="email" name="email" placeholder="Your Email" />
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
+        <div class="footer-section">
+          <h3>Site Map</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hotelmodel_accomodation.html">Accommodations</a></li>
+            <li><a href="hotelmodel_amenities.html">Amenities</a></li>
+            <li><a href="hotelmodel_dinning.html">Dining</a></li>
+            <li><a href="hotelmodel_spa-wellness.html">Spa & Wellness</a></li>
+            <li><a href="hotelmodel_special-offers.html">Special Offers</a></li>
+            <li><a href="hotelmodel_about.html">about</a></li>
+            <li><a href="#">contact us </a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
